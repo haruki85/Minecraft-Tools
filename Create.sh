@@ -15,8 +15,8 @@ mkdir ${DIR}
 cd ${DIR}
 wget ${URL}
 mv paper-${SERVER_VERSION}.jar paper-spigot.jar
-echo screen -AmdS plugin java -server -Xms${MEMORY_MIN} -Xmx${MEMORY_MAX} -jar paper-spigot.jar >> start.sh
-echo screen -d plugin >> start.sh
+echo screen -AmdS ${SCREEN_NAME} java -server -Xms${MEMORY_MIN} -Xmx${MEMORY_MAX} -jar paper-spigot.jar >> start.sh
+echo screen -d ${SCREEN_NAME} >> start.sh
 sh start.sh
 sleep 5
 
